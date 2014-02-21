@@ -233,6 +233,15 @@ body > header input[type=search]:focus {
 .tweet-icon:before {
   content: "\f029";
 }
+.favourite-icon:before {
+  content: "\f147";
+}
+.retweet-icon:before {
+  content: "\f152";
+}
+.reply-icon:before {
+  content: "\f151";
+}
 main {
   width: 936px;
   margin-left: auto;
@@ -266,15 +275,6 @@ section header h1 {
 .tweet-container {
   width: 590px;
   float: left;
-  zoom: 1;
-}
-.tweet-container:before,
-.tweet-container:after {
-  content: "";
-  display: table;
-}
-.tweet-container:after {
-  clear: both;
 }
 .tweet-container > header {
   padding: 12px;
@@ -284,6 +284,15 @@ section header h1 {
   border-bottom: 1px solid #e8e8e8;
   padding: 12px;
   position: relative;
+  zoom: 1;
+}
+.tweet-container .tweet:before,
+.tweet-container .tweet:after {
+  content: "";
+  display: table;
+}
+.tweet-container .tweet:after {
+  clear: both;
 }
 .tweet-container .tweet .extra-info {
   width: 100%;
@@ -302,8 +311,40 @@ section header h1 {
   background-clip: padding-box;
 }
 .tweet-container .tweet .body {
-  width: 80%;
+  width: 75%;
   float: left;
+}
+.tweet-container .tweet .body h1 {
+  color: #292f33;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline;
+}
+.tweet-container .tweet .body .username {
+  color: #8899a6;
+  font-size: 13px;
+  margin-left: 2px;
+}
+.tweet-container .tweet .body .time {
+  color: #8899a6;
+  font-size: 13px;
+  margin-left: 2px;
+}
+.tweet-container .tweet .body .time:before {
+  content: '.';
+  margin-right: 0.5em;
+  position: relative;
+  bottom: 4px;
+}
+.tweet-container .tweet .body header {
+  margin-bottom: 4px;
+}
+.tweet-container .tweet .body p {
+  font-size: 14px;
+  line-height: 18px;
+}
+.tweet-container .tweet > ul {
+  float: right;
 }
 .standard-box {
   background-color: #ffffff;

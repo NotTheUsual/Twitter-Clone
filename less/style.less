@@ -194,6 +194,12 @@ body > header {
 
 .tweet-icon:before { content: "\f029"; }
 
+.favourite-icon:before { content: "\f147"; }
+
+.retweet-icon:before { content: "\f152"; }
+
+.reply-icon:before { content: "\f151"; }
+
 // Main
 //------------------
 
@@ -226,7 +232,6 @@ section header h1 {
 .tweet-container {
   width: 590px;
   float: left;
-  .clearfix;
   
   > header {
     padding: 12px;
@@ -237,6 +242,7 @@ section header h1 {
     border-bottom: 1px solid rgb(232, 232, 232);
     padding: 12px;
     position: relative;
+    .clearfix;
     
     .extra-info {
       width: 100%;
@@ -252,11 +258,48 @@ section header h1 {
     }
     
     .body {
-      width: 80%;
+      width: 75%;
       float: left;
+      
+      h1 {
+        color: @tweet-name-colour;
+        font-weight: bold;
+        font-size: 14px;
+        display: inline;
+      }
+      
+      .username {
+        color: @tweet-username-colour;
+        font-size: 13px;
+        margin-left: 2px;
+      }
+      
+      .time {
+        color: @tweet-username-colour;
+        font-size: 13px;
+        margin-left: 2px;
+        
+        &:before {
+          content: '.';
+          margin-right: 0.5em;
+          position: relative;
+          bottom: 4px;
+        }
+      }
+      
+      header {
+        margin-bottom: 4px;
+      }
+      
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
     
-    
+    > ul {
+      float: right;
+    }
   }
 }
 
