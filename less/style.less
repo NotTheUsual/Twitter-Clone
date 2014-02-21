@@ -6,8 +6,9 @@
 * { box-sizing: border-box; }
 
 body {
-  background-color: @background-colour;
   font-family: @sans;
+  background: url('../img/bg.png') no-repeat;
+  background-color: @background-colour;
 }
 
 a {
@@ -15,17 +16,22 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 body > header {
   background-color: @white;
   text-align: center;
-//  position: fixed;
+  position: fixed;
   width: 100%;
+  z-index: 10;
   .clearfix;
   .box-shadow (0, 1px, 1px, 0.25);
   
   nav {
     float: left;
-    margin-left: 5%;
+    margin-left: 11%;
   }
   
   ul {
@@ -34,7 +40,7 @@ body > header {
   
   .extra-controls {
     float: right;
-    margin-right: 5%;
+    margin-right: 11.5%;
   }
   
   nav li {
@@ -64,7 +70,7 @@ body > header {
       font-size: 13px;
       font-weight: 500;
       margin-top: 8px;
-      margin-left: 0.5em;
+      margin-left: 0.25em;
       display: inline-block;
       color: @header-inactive;
       float: right;
@@ -127,7 +133,7 @@ body > header {
     color: @white;
   }
   
-  &> * {
+  > * {
     margin-right: 1.5em;
   }
   
@@ -137,8 +143,8 @@ body > header {
 }
 
 .nav-icon {
-  width: 21px;
-  height: 21px;
+  width: 23px;
+  height: 23px;
   margin-top: 2px;
   color: @header-inactive;
   border: none;
@@ -146,8 +152,9 @@ body > header {
   font-family: "rosettaicons";
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon {
@@ -157,6 +164,7 @@ body > header {
   font-size: 21px;
   line-height: 1;
   color: rgb(146, 156, 163);
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-bird {
@@ -185,3 +193,152 @@ body > header {
 .settings-icon:before { content: "\f059"; }
 
 .tweet-icon:before { content: "\f029"; }
+
+// Main
+//------------------
+
+main {
+  width: 936px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 56px 23px 15px;
+  .clearfix;
+}
+
+section header h1 {
+  color: @heading-colour;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 1em;
+  margin: 0;
+}
+
+.sidebar {
+  width: 290px;
+  float: left;
+  margin-right: 10px;
+  
+  .standard-box {
+    padding: 1em;
+  }
+}
+
+.tweet-container {
+  width: 590px;
+  float: left;
+  .clearfix;
+  
+  > header {
+    padding: 12px;
+    border-bottom: 1px solid rgb(232, 232, 232);
+  }
+  
+  .tweet {
+    border-bottom: 1px solid rgb(232, 232, 232);
+    padding: 12px;
+    position: relative;
+    
+    .extra-info {
+      width: 100%;
+      display: block;
+    }
+    
+    > img {
+      width: 48px;
+      height: 48px;
+      float: left;
+      margin-right: 10px;
+      .border-radius(5px);
+    }
+    
+    .body {
+      width: 80%;
+      float: left;
+    }
+    
+    
+  }
+}
+
+.standard-box {
+  background-color: @white;
+  .border-radius(5px);
+  border: 1px solid #e1e8ed;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.user-info {
+  .border-radius(5px);
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: @white;
+  
+  header {
+    background-color: #222;
+    height: 145px;
+    padding-top: 1em;
+    
+    a {
+      color: @white;
+      
+      &:hover h1 {
+        text-decoration: underline;
+      }
+    }
+    
+    img {
+      width: 54px;
+      height: 54px;
+      border: 3px solid @white;
+      .border-radius(4px);
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    
+    h1 {
+      font-size: 21px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 10px;
+      color: @white;
+    }
+    
+    .sidebar-profile-username {
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      padding-top: 0.5em;
+    }
+  }
+  
+  dl a {
+    display: inline-block;
+    padding: 0.5em 0.8em;
+  }
+  
+  dt {
+    color: #999;
+    font-size: 10px;
+    line-height: 16px;
+  }
+  
+  dd {
+    font-size: 20px;
+    color: @header-highlight-lighter;
+  }
+  
+  footer {
+    background-color: @reply-background;
+    padding: 10px 12px;
+    
+    input {
+      width: 100%;
+      border: 1px solid @reply-box-border-colour;
+//      color: rgb(170, 170, 170);
+      font-size: 13px;
+      padding: 6px 8px 5px;
+    }
+  }
+}

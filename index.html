@@ -47,33 +47,41 @@
       </section>
     </header>
     <main>
-      <aside>
+      <aside class="sidebar">
         <section class="user-info">
           <header>
-            <img alt="Profile Picture" />
-            <h1>James Hunter</h1>
-            <span>@jadhunter</span>
+            <a href="#">
+              <img alt="Profile Picture" src="img/JADH%20square.png" />
+              <h1>James Hunter</h1>
+              <p class="sidebar-profile-username">@jadhunter</p>
+            </a>
           </header>
           <dl>
-            <dt>Tweets</dt>
-            <dd>667</dd>
-            <dt>Following</dt>
-            <dd>103</dd>
-            <dt>Followers</dt>
-            <dd>37</dd>
+            <a href="#">
+              <dt>TWEETS</dt>
+              <dd>667</dd>
+            </a>
+            <a href="#">
+              <dt>FOLLOWING</dt>
+              <dd>103</dd>
+            </a>
+            <a href="#">
+              <dt>FOLLOWERS</dt>
+              <dd>37</dd>
+            </a>
           </dl>
           <footer>
             <input type="text" placeholder="Compose new Tweet..." />
-            <a href="#" title="Add image"><img alt="add-image" /></a>
-            <a href="#" title="Add location"><img alt="add-location" /></a>
-            <span class="character-count">140</span>
-            <button class="tweet-button">
+            <a class="hidden" href="#" title="Add image"><img alt="add-image" /></a>
+            <a class="hidden" href="#" title="Add location"><img alt="add-location" /></a>
+            <span class="character-count hidden">140</span>
+            <button class="tweet-button hidden">
               <img alt="tweet-image" />
               Tweet
             </button>
           </footer>
         </section>
-        <section class="who-to-follow">
+        <section class="who-to-follow standard-box">
           <header>
             <h1>Who to follow</h1>
             <ul>
@@ -115,7 +123,7 @@
             </ul>
           </footer>
         </section>
-        <section class="trends">
+        <section class="trends standard-box">
           <header>
             <h1>Trends</h1>
             <ul>
@@ -135,7 +143,7 @@
             <li><a href="#">Clegg</a></li>
           </ul>
         </section>
-        <section class="seconday-nav">
+        <section class="seconday-nav standard-box">
           <nav>
             <ul>
               <li>&copy; 2014 Twitter</li>
@@ -158,15 +166,15 @@
           </nav>
         </section>
       </aside>
-      <section class="tweet-container">
+      <section class="tweet-container standard-box">
         <header>
           <h1>Tweets</h1>
         </header>
         <ul class="tweets">
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
-              <img alt="tweet-profile" />
+              <img alt="tweet-profile" src="img/MA-tw-logo.png" />
               <section class="body">
                 <header>
                   <a href="#">
@@ -192,9 +200,9 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
-              <img alt="tweet-profile" />
+              <img alt="tweet-profile" src="img/MA-tw-logo.png" />
               <section class="body">
                 <header>
                   <a href="#">
@@ -220,7 +228,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info">Retweeted by <a href="#">Makers Academy</a></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -248,7 +256,35 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
+              <span class="extra-info"></span>
+              <img alt="tweet-profile" src="img/MA-tw-logo.png" />
+              <section class="body">
+                <header>
+                  <a href="#">
+                    <h1>Makers Academy</h1>
+                    <span class="username">@makersacademy</span>
+                  </a>
+                  <span class="time">45m</span>
+                </header>
+                <p>Maker <a href="#">@MakisOtman</a> discusses his journey behind the Academy walls after day 34. <a href="#">http://shokunin.roon.io/makers-academy-review-so-far…</a></p>
+                <footer>
+                  <ul>
+                    <li><a href="#">
+                      <img alt="reply-arrow" />
+                      Reply
+                    </a></li>
+                  </ul>
+                </footer>
+              </section>
+              <ul>
+                <li><a href="#"><img alt="favourite" /></a></li>
+                <li><a href="#"><img alt="retweet" /></a></li>
+              </ul>
+            </article>
+          </li>
+          <li>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -276,7 +312,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -304,7 +340,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -332,7 +368,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -360,7 +396,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -388,7 +424,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -416,7 +452,7 @@
             </article>
           </li>
           <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
@@ -444,35 +480,7 @@
             </article>
           </li>
           <li>
-            <article>
-              <span class="extra-info"></span>
-              <img alt="tweet-profile" />
-              <section class="body">
-                <header>
-                  <a href="#">
-                    <h1>Makers Academy</h1>
-                    <span class="username">@makersacademy</span>
-                  </a>
-                  <span class="time">45m</span>
-                </header>
-                <p>Maker <a href="#">@MakisOtman</a> discusses his journey behind the Academy walls after day 34. <a href="#">http://shokunin.roon.io/makers-academy-review-so-far…</a></p>
-                <footer>
-                  <ul>
-                    <li><a href="#">
-                      <img alt="reply-arrow" />
-                      Reply
-                    </a></li>
-                  </ul>
-                </footer>
-              </section>
-              <ul>
-                <li><a href="#"><img alt="favourite" /></a></li>
-                <li><a href="#"><img alt="retweet" /></a></li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article>
+            <article class="tweet">
               <span class="extra-info"></span>
               <img alt="tweet-profile" />
               <section class="body">
