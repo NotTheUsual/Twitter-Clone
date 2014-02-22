@@ -516,3 +516,16 @@ section header h1 {
   font-size: 13px;
   padding: 6px 8px 5px;
 }
+.secondary-nav:hover a {
+  color: #555555;
+}
+.secondary-nav li {
+  font-size: 12px;
+  line-height: 1.5em;
+  display: inline-block;
+  color: #999999;
+  padding-right: 5px;
+}
+.secondary-nav li a {
+  color: #999999;
+}
