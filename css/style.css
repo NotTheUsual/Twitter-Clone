@@ -30,6 +30,9 @@ a {
   color: #0084b4;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 .hidden {
   display: none;
 }
@@ -314,6 +317,13 @@ section header h1 {
   width: 75%;
   float: left;
 }
+.tweet-container .tweet .body header a:hover {
+  text-decoration: none;
+}
+.tweet-container .tweet .body header a:hover h1 {
+  text-decoration: underline;
+  color: #0084b4;
+}
 .tweet-container .tweet .body h1 {
   color: #292f33;
   font-weight: bold;
@@ -346,6 +356,20 @@ section header h1 {
 .tweet-container .tweet > ul {
   float: right;
 }
+.tweet-container .tweet > ul li a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 3px;
+}
+.tweet-container .tweet > ul li a span {
+  color: #ccd6dd;
+  display: inline-block;
+  font-size: 24px;
+}
+.tweet-container .tweet > ul li a:hover span {
+  color: #8899a6;
+}
 .standard-box {
   background-color: #ffffff;
   -webkit-border-radius: 5px;
@@ -376,6 +400,9 @@ section header h1 {
 }
 .user-info header a {
   color: #ffffff;
+}
+.user-info header a:hover {
+  text-decoration: none;
 }
 .user-info header a:hover h1 {
   text-decoration: underline;
@@ -410,6 +437,9 @@ section header h1 {
 .user-info dl a {
   display: inline-block;
   padding: 0.5em 0.8em;
+}
+.user-info dl a:hover {
+  text-decoration: none;
 }
 .user-info dt {
   color: #999;
