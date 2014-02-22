@@ -488,6 +488,40 @@ section header h1 {
   }
 }
 
+.trends {
+  header {
+    margin-bottom: 0.5em;
+  }
+  h1 {
+    display: inline-block;
+  }
+  
+  .header-options {
+    display: inline;
+    
+    li {
+      display: inline;
+      
+      &:before {
+        content: ".";
+        margin-right: 4px;
+        position: relative;
+        bottom: 3px;
+        color: @dot-grey;
+      }
+    }
+  }
+  
+  li {
+    font-size: 12px;
+    line-height: 20px;
+    
+    a {
+      color: @light-blue;
+    }
+  }
+}
+
 .secondary-nav {
   &:hover a {
     color: @dark-grey;

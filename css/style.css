@@ -516,6 +516,32 @@ section header h1 {
   font-size: 13px;
   padding: 6px 8px 5px;
 }
+.trends header {
+  margin-bottom: 0.5em;
+}
+.trends h1 {
+  display: inline-block;
+}
+.trends .header-options {
+  display: inline;
+}
+.trends .header-options li {
+  display: inline;
+}
+.trends .header-options li:before {
+  content: ".";
+  margin-right: 4px;
+  position: relative;
+  bottom: 3px;
+  color: #292f33;
+}
+.trends li {
+  font-size: 12px;
+  line-height: 20px;
+}
+.trends li a {
+  color: #1f98c7;
+}
 .secondary-nav:hover a {
   color: #555555;
 }
