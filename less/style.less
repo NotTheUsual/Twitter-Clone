@@ -248,9 +248,54 @@ section header h1 {
     position: relative;
     .clearfix;
     
+    &:hover {
+      background-color: @tweet-background-hover;
+      cursor: pointer;
+      
+      .inline-reply {
+        color: @tweet-reply-hover;
+
+        .icon {
+          color: @tweet-reply-hover;
+        }
+      }
+    }
+    
     .extra-info {
       width: 100%;
       display: block;
+      font-size: 12px;
+      color: @tweet-extra-info;
+      margin-bottom: 5px;
+      padding-left: 57px;
+      
+      a {
+        color: @tweet-extra-info;
+        
+        &:hover {
+          color: @tweet-extra-hover;
+        }
+      }
+      
+      &:hover a {
+        text-decoration: underline;
+      }
+      
+      &:before {
+        font-family: 'rosettaicons';
+        color: @white;
+        content: "\f152";
+        background-color: @retweet-icon-colour;
+        padding: 0 2px 2px;
+        line-height: 1em;
+        font-size: 13px;
+        display: block;
+        position: absolute;
+        left: 43px;
+        top: 9px;
+        .border-radius(3px);
+        -webkit-font-smoothing: antialiased;
+      }
     }
     
     > img {
@@ -327,6 +372,25 @@ section header h1 {
         
         &:hover span {
           color: @tweet-icons-hover;
+        }
+      }
+    }
+    
+    .inline-reply {
+      font-size: 12px;
+      color: @tweet-reply;
+      
+      .icon {
+        color: @tweet-reply;
+      }
+      
+// This next bit seems stupid, but it's the only way I could get the right effect...
+// May try to fix later if I have time...
+      &:hover {
+        text-decoration: none;
+        
+        .reply-text {
+          text-decoration: underline;
         }
       }
     }
