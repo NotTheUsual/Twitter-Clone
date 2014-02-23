@@ -27,7 +27,7 @@ body {
   background-color: #c0deed;
 }
 a {
-  color: #0084b4;
+  color: #1f98c7;
   text-decoration: none;
 }
 a:hover {
@@ -57,14 +57,14 @@ body > header:after {
 }
 body > header nav {
   float: left;
-  margin-left: 11%;
+  margin-left: 5%;
 }
 body > header ul {
   margin-bottom: -2px;
 }
 body > header .extra-controls {
   float: right;
-  margin-right: 11.5%;
+  margin-right: 5.5%;
 }
 body > header nav li {
   display: inline-block;
@@ -242,8 +242,20 @@ body > header input[type=search]:focus {
 .retweet-icon:before {
   content: "\f152";
 }
+.solid-retweet-icon:before {
+  content: "\f006";
+}
 .reply-icon:before {
   content: "\f151";
+}
+.close-icon:before {
+  content: "\f045";
+}
+.verified-icon:before {
+  content: "\f099";
+}
+.follow-icon:before {
+  content: "\f175";
 }
 main {
   width: 936px;
@@ -365,7 +377,7 @@ section header h1 {
 }
 .tweet-container .tweet .body header a:hover h1 {
   text-decoration: underline;
-  color: #0084b4;
+  color: #1f98c7;
 }
 .tweet-container .tweet .body h1 {
   color: #292f33;
@@ -516,24 +528,183 @@ section header h1 {
   font-size: 13px;
   padding: 6px 8px 5px;
 }
-.trends header {
-  margin-bottom: 0.5em;
+.header-options {
+  display: inline;
+  font-size: 12px;
 }
-.trends h1 {
-  display: inline-block;
-}
-.trends .header-options {
+.header-options li {
   display: inline;
 }
-.trends .header-options li {
-  display: inline;
+.header-options li a {
+  color: #1f98c7;
 }
-.trends .header-options li:before {
+.header-options li:before {
   content: ".";
   margin-right: 4px;
   position: relative;
   bottom: 3px;
   color: #292f33;
+}
+.who-to-follow > header {
+  margin-bottom: 0.75em;
+}
+.who-to-follow h1 {
+  display: inline-block;
+}
+.who-to-follow > footer {
+  display: inline;
+  font-size: 12px;
+}
+.who-to-follow > footer li {
+  display: inline;
+}
+.who-to-follow > footer li a {
+  color: #1f98c7;
+}
+.who-to-follow > footer li:before {
+  content: ".";
+  margin-right: 4px;
+  position: relative;
+  bottom: 3px;
+  color: #292f33;
+}
+.who-to-follow > footer li:first-child:before {
+  content: '';
+}
+.follow-person {
+  margin-bottom: 0.75em;
+  zoom: 1;
+}
+.follow-person:before,
+.follow-person:after {
+  content: "";
+  display: table;
+}
+.follow-person:after {
+  clear: both;
+}
+.follow-person-body {
+  float: left;
+}
+.follow-person-body header {
+  width: 198px;
+  position: relative;
+}
+.follow-person-body header a {
+  text-decoration: none;
+}
+.follow-person-body header a:first-child:hover h2 {
+  text-decoration: underline;
+  color: #1f98c7;
+}
+.follow-person-body header .follow-username {
+  color: #8899a6;
+  font-size: 13px;
+}
+.follow-person-body h2 {
+  color: #292f33;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+}
+.follow-person-body p {
+  font-size: 13px;
+  color: #8899a6;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.follow-person-body p a {
+  color: #1f98c7;
+}
+.follow-person-body button {
+  background-color: #f5f8fa;
+  padding: 4px 11px 6px;
+  font-size: 13px;
+  color: #292f33;
+  border: 1px solid #e1e8ed;
+  line-height: normal;
+  text-shadow: none;
+  box-shadow: none;
+  background-image: linear-gradient(#ffffff, #f5f8fa);
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  margin-top: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.follow-person-body button .follow-icon {
+  color: #55acee;
+  font-size: 16px;
+  line-height: 15px;
+  position: relative;
+  top: 1px;
+}
+.follow-person-body button:hover {
+  background-color: #e1e8ed;
+  background-image: linear-gradient(#ffffff, #e1e8ed);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+  border-color: #e1e8ed;
+}
+.follow-person-body button:focus {
+  -webkit-box-shadow: 0 0 0 1px #ffffff, 0 0 0 3px rgba(31, 152, 199, 0.5);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 3px rgba(31, 152, 199, 0.5);
+  background: #fff;
+  border-color: #fff;
+  outline: none;
+}
+.follow-person-body button:active {
+  background: #e1e8ed;
+  border-color: #ccc;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.verified-icon {
+  font-family: "rosettaicons";
+  font-size: 16px;
+  line-height: 13px;
+  position: relative;
+  top: 1px;
+  color: #13bdff;
+  margin-left: 2px;
+  margin-right: 3px;
+  -webkit-font-smoothing: antialiased;
+}
+.follow-icon {
+  font-family: "rosettaicons";
+  -webkit-font-smoothing: antialiased;
+}
+.close-icon {
+  font-family: "rosettaicons";
+  font-size: 10px;
+  color: #ccd6dd;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+.follow-image {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  float: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.trends header {
+  margin-bottom: 0.5em;
+}
+.trends h1 {
+  display: inline-block;
 }
 .trends li {
   font-size: 12px;
