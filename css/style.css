@@ -301,6 +301,15 @@ section header h1 {
   padding: 12px;
   border-bottom: 1px solid #e8e8e8;
 }
+.tweet-container > footer {
+  padding: 22px 0 24px;
+}
+.tweet-container > footer #spinner {
+  display: block;
+}
+.tweet-container > footer #spinner div {
+  height: 30px;
+}
 .tweet-container .tweet {
   border-bottom: 1px solid #e8e8e8;
   padding: 12px;
