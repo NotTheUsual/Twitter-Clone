@@ -70,15 +70,17 @@
               <dd>37</dd>
             </a>
           </dl>
-          <footer>
-            <input type="text" placeholder="Compose new Tweet..." />
-            <a class="hidden" href="#" title="Add image"><img alt="add-image" /></a>
-            <a class="hidden" href="#" title="Add location"><img alt="add-location" /></a>
-            <span class="character-count hidden">140</span>
-            <button class="tweet-button hidden">
-              <img alt="tweet-image" />
-              Tweet
-            </button>
+          <footer id="inline-tweet-form">
+            <div class="input-div">Compose new Tweet...</div>
+            <menu class="inline-tweet-options">
+              <a class="hidden" href="#" title="Add image"><span class="icon photo-icon"></span></a>
+              <a class="hidden" href="#" title="Add location"><span class="icon location-icon"></span></a>
+              <button class="tweet-button hidden">
+                <span class="icon tweet-icon"></span>
+                <span class="tweet-button-text">Tweet</span>
+              </button>
+              <span class="character-count hidden">140</span>
+            </menu>
           </footer>
         </section>
         <section class="who-to-follow standard-box">
@@ -509,6 +511,7 @@
       </section>
     </main>
     
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

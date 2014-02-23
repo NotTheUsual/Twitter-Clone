@@ -212,6 +212,10 @@ body > header {
 
 .follow-icon:before { content: "\f175"; }
 
+.photo-icon:before { content: "\f110"; }
+
+.location-icon:before { content: "\f100"; }
+
 // Main
 //------------------
 
@@ -489,9 +493,97 @@ section header h1 {
     input {
       width: 100%;
       border: 1px solid @reply-box-border-colour;
-//      color: rgb(170, 170, 170);
       font-size: 13px;
       padding: 6px 8px 5px;
+    }
+    
+    .input-div {
+      width: 100%;
+      border: 1px solid @reply-box-border-colour;
+      background-color: @white;
+      font-size: 13px;
+      line-height: 18px;
+      padding: 6px 8px 5px;
+      cursor: text;
+      color: rgb(170, 170, 170);
+      .border-radius(3px);
+    }
+    
+    textarea {
+      width: 100%;
+      border: 1px solid @reply-box-border-colour;
+      font-size: 13px;
+      padding: 6px 8px 5px;
+      margin: 0;
+      resize: none;
+      .border-radius(3px);
+      
+      &:focus {
+        outline: none;
+      }
+    }
+    
+    .inline-tweet-options {
+      width: 100%;
+      .clearfix;
+    }
+    
+    .photo-icon, .location-icon {
+      font-size: 20px;
+      display: inline-block;
+      margin-right: 25px;
+      margin-top: 13px;
+      padding: 4px 10px;
+      color: @light-blue;
+      float: left;
+    }
+    
+    .character-count {
+      float: right;
+      position: relative;
+      font-size: 14px;
+      top: 20px;
+      color: rgb(153, 153, 153);
+      margin-right: 10px;
+    }
+    
+    .tweet-button {
+      background-color: @tweet-button;
+      border: 1px solid transparent;
+      color: @white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 9px 16px;
+      float: right;
+      .border-radius(4px);
+      margin: 5px 0 0;
+      
+      .tweet-icon {
+        color: @white;
+      }
+      
+      &:hover {
+        background-color: @light-blue;
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.14902));
+      }
+      
+      &:active {
+        background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15));
+        border-color: transparent;
+        box-shadow: inset 0 1px 4px rgba(0,0,0,0.3);
+      }
+      
+      &:focus {
+        border: 1px solid #fff;
+        -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(31, 152, 199, 0.5);
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(31, 152, 199, 0.5);
+      }
+    }
+    
+    .tweet-button-text {
+      position: relative;
+      bottom: 2px;
     }
   }
 }
