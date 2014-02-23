@@ -57,14 +57,14 @@ body > header:after {
 }
 body > header nav {
   float: left;
-  margin-left: 5%;
+  margin-left: 0;
 }
 body > header ul {
   margin-bottom: -2px;
 }
 body > header .extra-controls {
   float: right;
-  margin-right: 5.5%;
+  margin-right: 20px;
 }
 body > header nav li {
   display: inline-block;
@@ -103,13 +103,26 @@ body > header nav li .nav-text {
   color: #66757f;
   float: right;
 }
+body > header #search-form {
+  display: inline-block;
+  position: relative;
+}
+body > header #search-form .search-icon {
+  font-family: 'rosettaicons';
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 7px;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
 body > header input[type=search] {
   background-color: #66757f;
   color: #ffffff;
   font-weight: 500;
   opacity: 0.6;
   border: none;
-  padding: 0.75em;
+  padding: 0.75em 2.5em 0.75em 0.75em;
   width: 200px;
   position: relative;
   top: 4px;
@@ -137,7 +150,24 @@ body > header input[type=search] :-ms-input-placeholder {
 body > header input[type=search]:focus {
   outline: none;
   opacity: 1;
-  background-color: #667565;
+  background-color: rgba(83, 97, 108, 0.8);
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+  opacity: 0.6;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
 }
 #settings-menu {
   display: none;
@@ -262,6 +292,9 @@ body > header input[type=search]:focus {
 }
 .location-icon:before {
   content: "\f100";
+}
+.search-icon:before {
+  content: "\f058";
 }
 main {
   width: 936px;
@@ -841,4 +874,32 @@ section header h1 {
 }
 .secondary-nav li a {
   color: #999999;
+}
+@media screen and (min-width: 1200px) {
+  body > header nav {
+    margin-left: 5%;
+  }
+  body > header .extra-controls {
+    margin-right: 5.5%;
+  }
+}
+@media screen and (max-width: 860px) {
+  body > header .extra-controls {
+    margin-right: 10px;
+  }
+  body > header nav li .nav-text {
+    display: none;
+  }
+  body > header input[type=search] {
+    transition: all 0.25s ease-in-out;
+    width: 130px;
+  }
+  .icon-bird {
+    left: 45%;
+  }
+}
+@media screen and (max-width: 600px) {
+  body > header {
+    width: 600px;
+  }
 }
