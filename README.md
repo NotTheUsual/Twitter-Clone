@@ -1,6 +1,10 @@
 # Twitter Clone!
 
-So, Twitter clone.
+This was the test for the weekend of the 7th week of Makers Academy. The challenge was to recreate the front end of Twitter as closely as possible. Obviously the front end of Twitter changes all the time, so trust me when I say it looked a lot like this at the time (the fav/RT icons being on the side of each tweet, in particular, look really odd having since disappeared (though perhaps these are linked...)).
+
+Recreated using HTML, LESS and JS.
+
+## Details !
 
 Here are things you can click on:
 - The new tweet box! It'll expand and show you extra controls! The count won't actually change! The button won't work! But it should look roughly right! I've just noticed that I haven't done the hover effect on the photo/location buttons! It's really late, though! Oh well!
@@ -12,7 +16,7 @@ Responsiveness!
 - That's it!
 
 Extra content!
-- Scroll to the end of the page, and you'll be rewarded with a spinner for a bit, and then two extra tweets. IF you try the same trick again, you'll get exactly the same result, which only seems fair.
+- Scroll to the end of the page, and you'll be rewarded with a spinner for a bit, and then two extra tweets. If you try the same trick again, you'll get exactly the same result, which only seems fair.
 
 Think that's everything
 
